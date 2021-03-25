@@ -33,4 +33,11 @@ public class RESTBackend {
 		}
 		return theBackend;
 	}
+
+	public static synchronized RESTBackend getRESTBackend(String url, String data) {
+		if (theBackend == null) {
+			theBackend = new RESTBackend(url, data);
+		}
+		return theBackend;
+	}
 }
