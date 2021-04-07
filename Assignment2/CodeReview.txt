@@ -1,0 +1,27 @@
+CODE REVIEW
+
+Problems
+1. Use enumeration for account type, not static variables (cat: Enums and Annotations)
+2. Unnecessary variable vb from print method  (cat: Avoid creating unnecessary objects)
+3. Print method is unnecessary as the toString method is overridden (cat: Avoid creating unnecessary objects)
+4. Use a naming convention for the variables (eg: loan_variable, account_Type) (cat: Meaningful names)
+5. Use meaningful names for the methods (eg: calculate, loan) (cat: Meaningful names)
+6. Always override toString (cat: General Programming)
+7. Use StringBuilder for string concatenation for better performance (cat: General Programming)
+8. Code needs to be formatted (cat: Formatting)
+9. Single responsability principle for Account class regarding computing the total fee (cat: Functions)
+10. Restrict privileges (eg: make the attributes private) (cat: Fundamentals, Classes and Interfaces)
+11. Make class final if not being used for inheritance (cat: Fundamentals)
+12. In public classes, use accessor methods, not public fields (cat: Classes and Interfaces)
+13. Delete comments (cat: Comments)
+
+
+So in order to solve the problems stated above, in the refactoring I remade the Account class,
+by keeping the fields and the methods that interest only the Account class (constructor, getters/setters,
+overridden toString method and the getMonthlyRate method (implemented by overriding an interface)).
+
+To get the total amount of fees from premium and super-premium accounts, I used a separate class which
+has a public static method that gets the array of Accounts and returns the total fee. This class is an
+utility class.
+
+Also, I implemented an Exception class for invalid input.
