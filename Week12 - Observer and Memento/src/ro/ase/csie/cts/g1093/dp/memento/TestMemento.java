@@ -11,5 +11,7 @@ public class TestMemento {
 		superman.takeAHit(20);
 
 		System.out.println("Lifepoints: " + superman.lifepoints);
+		
+		
 	}
 }
