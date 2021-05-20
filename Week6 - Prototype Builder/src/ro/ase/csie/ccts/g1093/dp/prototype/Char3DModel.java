@@ -34,6 +34,9 @@ public class Char3DModel implements Cloneable {
 
 	@Override
 	public Object clone() throws CloneNotSupportedException {
+		// don't
+		// Char3DModel copy = new Char3DModel(this.type, this.color);
+
 		Char3DModel copy = new Char3DModel();
 		copy.type = this.type;
 		copy.color = this.color;
