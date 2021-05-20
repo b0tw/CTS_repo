@@ -12,6 +12,8 @@ public class TestMemento {
 
 		System.out.println("Lifepoints: " + superman.lifepoints);
 		
-		
+		superman.restore(initialSave);
+		System.out.println("Lifepoints: " + superman.lifepoints);
+
 	}
 }
