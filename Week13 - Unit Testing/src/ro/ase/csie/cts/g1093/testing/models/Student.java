@@ -61,7 +61,10 @@ public class Student {
 	}
 
 	public float getGradesAverage() {
-		int sum = 0;
+		if (this.grades == null || grades.isEmpty()) {
+			return 0;
+		}
+		float sum = 0;
 		for (int grade : this.grades) {
 			sum += grade;
 		}
